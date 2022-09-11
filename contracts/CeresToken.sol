@@ -85,7 +85,6 @@ contract CeresToken is CfoTakeable,Pausable,BlackListable,IERC20Metadata {
 
     function permit(address owner, address spender, uint amount, uint deadline, uint8 v, bytes32 r, bytes32 s) external {
         require(block.timestamp <= deadline, "ERC20permit: expired");
-        // bytes32 domainSeparator = keccak256(abi.encode(DOMAIN_TYPEHASH, keccak256(bytes(_name)), _getChainId(), address(this)));
         bytes32 structHash = keccak256(abi.encode(PERMIT_TYPEHASH, owner, spender, amount, nonces[owner]++, deadline));
         bytes32 digest = keccak256(abi.encodePacked("\x19\x01", DOMAIN_SEPARATOR, structHash));
         address signatory = ecrecover(digest, v, r, s);
@@ -165,8 +164,6 @@ contract CeresToken is CfoTakeable,Pausable,BlackListable,IERC20Metadata {
     function _mint(address account, uint256 amount) internal {
         require(account != address(0), "ERC20: mint to the zero address");
 
-        // _beforeTokenTransfer(address(0), account, amount);
-
         _totalSupply += amount;
         _balances[account] += amount;
         emit Transfer(address(0), account, amount);
@@ -176,8 +173,6 @@ contract CeresToken is CfoTakeable,Pausable,BlackListable,IERC20Metadata {
 
     function _burn(address account, uint256 amount) internal {
         require(account != address(0), "ERC20: burn from the zero address");
-
-        // _beforeTokenTransfer(account, address(0), amount);
 
         uint256 accountBalance = _balances[account];
         require(accountBalance >= amount, "ERC20: burn amount exceeds balance");
