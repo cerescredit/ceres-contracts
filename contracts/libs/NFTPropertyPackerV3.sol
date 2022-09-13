@@ -19,7 +19,6 @@ library NFTPropertyPacker {
         for(uint i=0;i<l;i++){
             r += uint(uint8(b[32 - i - 1])) << (i*8);
         }
-
         return bytes32(r);   
     }
 
