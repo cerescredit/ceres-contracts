@@ -9,7 +9,9 @@ import './Ownable.sol';
 abstract contract NFTMintManager is Ownable {
 
     mapping(address => bool) public isMinter;
+    
     mapping(address => bool) public isUpdater;
+    
     uint256 public nextTokenId = 1;
 
     modifier onlyMinter {
