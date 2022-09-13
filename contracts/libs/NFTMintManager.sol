@@ -10,7 +10,6 @@ abstract contract NFTMintManager is Ownable {
 
     mapping(address => bool) public isMinter;
     mapping(address => bool) public isUpdater;
-
     uint256 public nextTokenId = 1;
 
     modifier onlyMinter {
@@ -27,7 +26,7 @@ abstract contract NFTMintManager is Ownable {
         require(minter != address(0),"invalid new minter");
         isMinter[minter] = true;
     }
-
+    
     function removeMinter(address minter) public onlyOwner {
         require(minter != address(0),"invalid new minter");
         isMinter[minter] = false;
