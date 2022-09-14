@@ -24,7 +24,9 @@ contract CeresBinder is CfoTakeable,Adminable,ReentrancyGuard {
     address public rewardsToken;
 
     uint public selfAmount;
+    
     uint public parentAmount;
+    
     uint public grandpAmount;
 
     uint256 public addRelationBNBFee = 0;
