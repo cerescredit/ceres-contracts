@@ -19,45 +19,25 @@ contract CeresRelation is Pausable,BlackListable,ICeresRelation {
     mapping(address=>uint256) private _stakeBalances;
     mapping(address=>uint256) private _specialTrials;
     mapping(address=>StakeInfo) private _stakes;
-    
     uint256 public override distributeFee;
-    
     address public feeTo;
-    
     uint256 public override bindReward;
-    
     uint256 public parentRewards;
-    
     uint256 public grandpaRewards;
-    
     uint256 public override mintedRewards;
-    
     uint256 public override remainingRewards;
-
     bool public override stakeEnabled;
-    
     uint256 public stakeEnableTime;
-
     bool public verifyChild;
-
     uint256 public constant distributeFeeCap = 1000 * 1e18;
-    
     uint256 public constant override monthScale = 31 days;
-    
     uint256 public constant override stakeBase = 10000 * 1e18;
-    
-    uint256 public override maxStakeMonth = 10;
-    
+    uint256 public override maxStakeMonth = 10; 
     uint256 public override globalTrial = 0;
-    
     bool public override withdrawEnabled;
-    
-    bool public override burnEnabled;
-    
-    bool public queryVerify;
-  
+    bool public override burnEnabled;   
+    bool public queryVerify;  
     address public override immutable stakingToken;
-    
     uint256 public immutable createTime;
 
 
