@@ -19,17 +19,21 @@ contract CeresBinder is CfoTakeable,Adminable,ReentrancyGuard {
     using SafeMath for uint256;
 
     address public immutable ceresRelation;
+    
     IDID public immutable ceresDID;
     
     address public rewardsToken;
     
     uint public selfAmount;
+    
     uint public parentAmount;
+    
     uint public grandpAmount;
     
     uint256 public addRelationBNBFee = 0;
 
     mapping(address => bool) public exists;
+    
     uint256 public recordedUserCount;
 
     constructor(
