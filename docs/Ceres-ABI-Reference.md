@@ -250,6 +250,21 @@
 | -------------- | ---------------- |
 | Ceres Relation | 0x62B231b9dd1dAD0c4F4162d591cb4D78f097aEdb |
 
+### Arbiturm mainnet
+| Contract name | Contract address |
+| -------------- | ---------------- |
+| Ceres Relation | 0xe3ae76Ad8Fd977ac540e1A67652fbA3E9b95f362 |
+
+### Avalanche C-Chain
+| Contract name | Contract address |
+| -------------- | ---------------- |
+| Ceres Relation | 0xe3ae76Ad8Fd977ac540e1A67652fbA3E9b95f362 |
+
+### Fantom mainnet
+| Contract name | Contract address |
+| -------------- | ---------------- |
+| Ceres Relation | 0xe3ae76Ad8Fd977ac540e1A67652fbA3E9b95f362 |
+
 ### HECO mainnet
 | Contract name | Contract address |
 | -------------- | ---------------- |
