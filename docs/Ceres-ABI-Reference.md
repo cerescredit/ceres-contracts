@@ -265,6 +265,11 @@
 | -------------- | ---------------- |
 | Ceres Relation | 0xe3ae76Ad8Fd977ac540e1A67652fbA3E9b95f362 |
 
+### Cosmos Evmos
+| Contract name | Contract address |
+| -------------- | ---------------- |
+| Ceres Relation | 0xe3ae76Ad8Fd977ac540e1A67652fbA3E9b95f362 |
+
 ### HECO mainnet
 | Contract name | Contract address |
 | -------------- | ---------------- |
