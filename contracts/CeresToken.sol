@@ -14,12 +14,15 @@ contract CeresToken is CfoTakeable,Pausable,BlackListable,IERC20Metadata {
     using SafeMath for uint256;
 
     mapping(address => uint256) private _balances;
+    
     mapping(address => mapping(address => uint256)) private _allowances;
 
     //mainnet: 
     string private constant _name = "Ceres Token";
+    
     //mainnet: 
     string private constant _symbol = "Ceres";
+    
     uint256 private _totalSupply = 60000000 * 1e18;
 
     /// @notice The EIP-712 typehash for the contract's domain
@@ -36,6 +39,7 @@ contract CeresToken is CfoTakeable,Pausable,BlackListable,IERC20Metadata {
     mapping(address => bool) private _whiteList;
 
     uint256 public feeRate = 1 * 1e16;
+    
     address public feeTo = address(0x01887CB054499ff7c66c7845198Ef7395A300375);
 
     constructor(){
