@@ -16,15 +16,10 @@ contract CeresRelation is Pausable,BlackListable,ICeresRelation {
     using SafeERC20 for IERC20;
 
     mapping(address=>address) private _parents;
-    
     mapping(address=>uint256) private _stakeBalances;
-    
     mapping(address=>uint256) private _specialTrials;
-    
     mapping(address=>StakeInfo) private _stakes;    
-    
     uint256 public override distributeFee;    
-    
     address public feeTo;    
     
     uint256 public override bindReward;    
@@ -52,15 +47,10 @@ contract CeresRelation is Pausable,BlackListable,ICeresRelation {
     uint256 public override maxStakeMonth = 10;     
     
     uint256 public override globalTrial = 0;  
-    
     bool public override withdrawEnabled; 
-    
     bool public override burnEnabled;     
-    
     bool public queryVerify;   
-    
     address public override immutable stakingToken;  
-    
     uint256 public immutable createTime;
 
 
