@@ -17,31 +17,18 @@ contract CeresDID is CfoNftTakeable,ERC721Enumerable,NFTPropertyStorage,NFTMintM
     using SafeCast for uint256;
 
     mapping(uint256 => string) private _propertyNames;
-    
     mapping(bytes32 => string) private _propertyAlias;
-    
     mapping(uint256 => string) public tokenDIDOf;
-    
     mapping(bytes32 => uint256) public didTokenIdOf;
-    
     mapping(uint256 => string) public customImageOf;
-    
     mapping(uint256 => address) public minterOf;
-    
     mapping(address => uint256) public mintedTokenOf;
-    
     mapping(uint256 => mapping(uint256 => string)) public stringPropertyOf;
-    
     bool public transferAllowed;
-    
     uint256 public constant allPackedPropsLength = 3; 
-    
     uint256 public constant allPropsLength = 6;
-    
     uint256 private constant allStringPropsLength = 6;
-    
     address public tokenDescriptor;
-    
     string public constant description = "Ceres DID is Decentralized digital identity system with programmable metadata and verifiable signatures.";
 
     event Minted(address minter,address to,uint tokenId,bytes32[] packedProps,string did);
@@ -50,19 +37,29 @@ contract CeresDID is CfoNftTakeable,ERC721Enumerable,NFTPropertyStorage,NFTMintM
         addMinter(msg.sender);
         addUpdater(msg.sender);
 
-        _propertyNames[0] = "string-property1";
-        _propertyNames[1] = "string-property2";
-        _propertyNames[2] = "string-property3";
-        _propertyNames[3] = "string-property4";
-        _propertyNames[4] = "string-property5";
-        _propertyNames[5] = "string-property6";
+        _propertyNames[0] = "s1";
+        
+        _propertyNames[1] = "s2";
+        
+        _propertyNames[2] = "s3";
+        
+        _propertyNames[3] = "s4";
+        
+        _propertyNames[4] = "s5";
+        
+        _propertyNames[5] = "s6";
 
-        _propertyNames[6] = "number-property1";
-        _propertyNames[7] = "number-property2";
-        _propertyNames[8] = "number-property3";
-        _propertyNames[9] = "number-property4";
-        _propertyNames[10] = "number-property5";
-        _propertyNames[11] = "number-property6";
+        _propertyNames[6] = "n1";
+        
+        _propertyNames[7] = "n2";
+        
+        _propertyNames[8] = "n3";
+        
+        _propertyNames[9] = "n4";
+        
+        _propertyNames[10] = "n5";
+        
+        _propertyNames[11] = "n6";
     }
 
     function packProperties(uint[] memory unpackedProps) public pure returns(bytes32[] memory) {
