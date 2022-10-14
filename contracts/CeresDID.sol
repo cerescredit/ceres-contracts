@@ -4,7 +4,6 @@ pragma solidity 0.8.15;
 
 import "./libs/Address.sol";
 import "./libs/Base64.sol";
-
 import './libs/SafeMath.sol';
 import './libs/SafeCast.sol';
 import './libs/INFTDescriptor.sol';
