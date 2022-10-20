@@ -18,7 +18,9 @@ interface IDIDNFT {
 contract DIDMinter is CfoNftTakeable,Adminable,Pausable,ReentrancyGuard {
 
     IDIDNFT public immutable ceresDIDNFT; 
+    
     uint public mintBNBFee;
+    
     event Minted(address caller,uint tokenId);
     
     constructor(
