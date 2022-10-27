@@ -4,11 +4,8 @@
 pragma solidity 0.8.15;
 
 import './libs/Pausable.sol';
-
 import './libs/ReentrancyGuard.sol';
-
 import './libs/Adminable.sol';
-
 import './libs/CfoNftTakeable.sol';
 
 interface IDIDNFT {
@@ -21,7 +18,6 @@ interface IDIDNFT {
 contract DIDMinter is CfoNftTakeable,Adminable,Pausable,ReentrancyGuard {
 
     IDIDNFT public immutable ceresDIDNFT; 
-    
     uint public mintBNBFee;
     
     event Minted(address caller,uint tokenId);
