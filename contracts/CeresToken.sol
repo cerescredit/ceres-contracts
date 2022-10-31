@@ -14,12 +14,17 @@ contract CeresToken is CfoTakeable,Pausable,BlackListable,IERC20Metadata {
     using SafeMath for uint256;
 
     mapping(address => uint256) private _balances;
+    
     mapping(address => mapping(address => uint256)) private _allowances;
+    
     //mainnet: 
     string private constant _name = "Ceres Token";
+    
     //mainnet: 
     string private constant _symbol = "Ceres";
+    
     uint256 private _totalSupply = 60000000 * 1e18;
+    
     /// @notice The EIP-712 typehash for the contract's domain
     bytes32 public constant DOMAIN_TYPEHASH = keccak256("EIP712Domain(string name,uint256 chainId,address verifyingContract)");
     /// @notice The EIP-712 typehash for the permit struct used by the contract
