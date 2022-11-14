@@ -17,9 +17,13 @@ contract CeresDID is CfoNftTakeable,ERC721Enumerable,NFTPropertyStorage,NFTMintM
     using SafeCast for uint256;
 
     mapping(uint256 => string) private _propertyNames;
+    
     mapping(bytes32 => string) private _propertyAlias;
+    
     mapping(uint256 => string) public tokenDIDOf;
+    
     mapping(bytes32 => uint256) public didTokenIdOf;
+    
     mapping(uint256 => string) public customImageOf;
     mapping(uint256 => address) public minterOf;
     mapping(address => uint256) public mintedTokenOf;
