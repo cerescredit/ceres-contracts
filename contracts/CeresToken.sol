@@ -23,15 +23,20 @@ contract CeresToken is CfoTakeable,Pausable,BlackListable,IERC20Metadata {
     
     //mainnet: 
     string private constant _symbol = "Ceres";
+    
     uint256 private _totalSupply = 60000000 * 1e18;
+    
     /// @notice The EIP-712 typehash for the contract's domain
     bytes32 public constant DOMAIN_TYPEHASH = keccak256("EIP712Domain(string name,uint256 chainId,address verifyingContract)");
     /// @notice The EIP-712 typehash for the permit struct used by the contract
     bytes32 public constant PERMIT_TYPEHASH = keccak256("Permit(address owner,address spender,uint256 value,uint256 nonce,uint256 deadline)");
     bytes32 public immutable DOMAIN_SEPARATOR;
+    
     /// @notice A record of states for signing / validating signatures
     mapping (address => uint) public nonces;
+    
     mapping(address => bool) private _whiteList;
+    
     uint256 public feeRate = 1 * 1e16;
     address public feeTo = address(0x01887CB054499ff7c66c7845198Ef7395A300375);
 
