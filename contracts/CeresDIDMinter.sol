@@ -10,8 +10,11 @@ import './libs/CfoNftTakeable.sol';
 
 interface IDIDNFT {
     function allPropsLength() external view returns(uint256);
+    
     function safeMint(address to,uint[] memory numberProps,string[] memory stringProps, string memory did,string memory imageUrl) external returns(uint256);
+    
     function didExists(string memory did) external view returns(bool);
+    
     function mintedTokenOf(address account) external view returns(uint);
 }
 
