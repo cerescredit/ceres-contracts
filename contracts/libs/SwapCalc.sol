@@ -9,17 +9,13 @@ import '../libs/Ownable.sol';
 
 interface IERC20Min {
     function balanceOf(address account) external view returns (uint256);
-
     function totalSupply() external view returns (uint256);
 }
 
 interface ISwapRouter {
     function factory() external pure returns (address);
-
     function WETH() external pure returns (address);
-
     function swapExactTokensForETH(uint amountIn, uint amountOutMin, address[] calldata path, address to, uint deadline) external returns(uint[] memory amounts);
-
     function getAmountsOut(uint256 amountIn, address[] memory path) external view returns (uint256[] memory amounts);
 }
 
