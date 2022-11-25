@@ -14,7 +14,9 @@ contract CeresToken is CfoTakeable,Pausable,BlackListable,IERC20Metadata {
     using SafeMath for uint256;
     
     mapping(address => uint256) private _balances;
+    
     mapping(address => mapping(address => uint256)) private _allowances;
+    
     //mainnet: 
     string private constant _name = "Ceres Token";
     //mainnet: 
