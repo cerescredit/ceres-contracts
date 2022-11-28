@@ -23,15 +23,25 @@ contract CeresDID is CfoNftTakeable,ERC721Enumerable,NFTPropertyStorage,NFTMintM
     mapping(uint256 => string) public tokenDIDOf;
     
     mapping(bytes32 => uint256) public didTokenIdOf;
+    
     mapping(uint256 => string) public customImageOf;
+    
     mapping(uint256 => address) public minterOf;
+    
     mapping(address => uint256) public mintedTokenOf;
+    
     mapping(uint256 => mapping(uint256 => string)) public stringPropertyOf;
+    
     bool public transferAllowed;
+    
     uint256 public constant allPackedPropsLength = 3; 
+    
     uint256 public constant allPropsLength = 6;
+    
     uint256 private constant allStringPropsLength = 6;
+    
     address public tokenDescriptor;
+    
     string public constant description = "Ceres DID is Decentralized digital identity system with programmable metadata and verifiable signatures.";
     event Minted(address minter,address to,uint tokenId,bytes32[] packedProps,string did);
 
