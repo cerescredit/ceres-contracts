@@ -19,16 +19,19 @@ contract CeresBinder is CfoTakeable,Adminable,ReentrancyGuard {
     using SafeMath for uint256;
 
     address public immutable ceresRelation;
-    
     IDID public immutable ceresDID;
-    
     address public rewardsToken;
     
     uint public selfAmount;
+    
     uint public parentAmount;
+    
     uint public grandpAmount;
+    
     uint256 public addRelationBNBFee = 0;
+    
     mapping(address => bool) public exists;
+    
     uint256 public recordedUserCount;
 
     constructor(
@@ -40,7 +43,9 @@ contract CeresBinder is CfoTakeable,Adminable,ReentrancyGuard {
         require(_ceresDID != address(0),"_nameNft can not be address 0");
 
         ceresRelation = _ceresRelation;
+        
         ceresDID = IDID(_ceresDID);
+        
         rewardsToken = _reawrdsToken;
         
         if(_reawrdsToken != address(0)){
