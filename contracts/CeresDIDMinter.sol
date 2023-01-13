@@ -21,13 +21,16 @@ interface IDIDNFT {
 contract DIDMinter is CfoNftTakeable,Adminable,Pausable,ReentrancyGuard {
 
     IDIDNFT public immutable ceresDIDNFT;
+    
     uint public mintBNBFee;
+    
     event Minted(address caller,uint tokenId);
     
     constructor(
         address _ceresDIDNFT
     ) {
         require(_ceresDIDNFT != address(0),"_ceresDIDNFT vault can not be 0");
+        
         ceresDIDNFT = IDIDNFT(_ceresDIDNFT);
     }
 
