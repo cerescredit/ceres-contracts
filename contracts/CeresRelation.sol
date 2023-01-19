@@ -11,8 +11,11 @@ import './interfaces/IStakingToken.sol';
 import './interfaces/ICeresRelation.sol';
 
 contract CeresRelation is Pausable,BlackListable,ICeresRelation {
+
     using Address for address;
+
     using SafeMath for uint256;
+    
     using SafeERC20 for IERC20;
 
     mapping(address=>address) private _parents;

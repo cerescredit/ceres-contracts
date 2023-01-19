@@ -35,9 +35,13 @@ contract DIDMinter is CfoNftTakeable,Adminable,Pausable,ReentrancyGuard {
     }
 
     function mint(string memory did,string memory imageUrl) external payable whenNotPaused nonReentrant {
+
         require(msg.value >= mintBNBFee,"insufficient input value");
+
         require(bytes(did).length > 0,"did can not be empty");
+
         require(bytes(imageUrl).length > 0,"image can not be empty");
+        
         require(!ceresDIDNFT.didExists(did),"did existed");
 
         uint[] memory numberProps = new uint[](ceresDIDNFT.allPropsLength());

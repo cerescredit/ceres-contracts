@@ -34,10 +34,13 @@ contract CeresBinder is CfoTakeable,Adminable,ReentrancyGuard {
         address _reawrdsToken
     ){
         require(_ceresRelation != address(0),"_ceresRelation can not be address 0");
+
         require(_ceresDID != address(0),"_nameNft can not be address 0");
 
         ceresRelation = _ceresRelation;
+
         ceresDID = IDID(_ceresDID);
+
         rewardsToken = _reawrdsToken;
         
         if(_reawrdsToken != address(0)){
@@ -47,7 +50,9 @@ contract CeresBinder is CfoTakeable,Adminable,ReentrancyGuard {
 
     // query the relationship between two addresses
     function isParent(address child,address parent) external view returns(bool){
+
         return ICeresCore(ceresRelation).isParent(child, parent);
+        
     }    
     
     // query inviter of address

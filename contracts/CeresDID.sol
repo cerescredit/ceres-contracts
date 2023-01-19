@@ -13,7 +13,9 @@ import './libs/NFTMintManager.sol';
 import './libs/CfoNftTakeable.sol';
 
 contract CeresDID is CfoNftTakeable,ERC721Enumerable,NFTPropertyStorage,NFTMintManager {
+
     using SafeMath for uint256;
+    
     using SafeCast for uint256;
 
     mapping(uint256 => string) private _propertyNames;
