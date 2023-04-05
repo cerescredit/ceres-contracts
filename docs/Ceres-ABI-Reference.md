@@ -245,10 +245,10 @@
 | -------------- | ---------------- |
 | Ceres Relation | 0xf41B35c3e9C3108D2572e97C1f4d0124C8a4C81f |
 
-### zkSync testnet
+### zkSync Era mainnet
 | Contract name | Contract address |
 | -------------- | ---------------- |
-| Ceres Relation | 0x62B231b9dd1dAD0c4F4162d591cb4D78f097aEdb |
+| Ceres Relation | 0x81a2BE359579000b9e08c2827cc76b774773af46 |
 
 ### Arbiturm mainnet
 | Contract name | Contract address |
